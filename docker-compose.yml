@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    entrypoint: sh
+    volumes:
+      - ./:/workspace:cached
+    tty: true
+    env_file:
+    - my.env

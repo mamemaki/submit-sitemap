@@ -1,0 +1,22 @@
+{
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "gopls": {
+    "usePlaceholders": true,
+    "analyses": {
+      "unusedparams": false,
+      "simplifycompositelit": false,
+   }
+  },
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": [
+    "--config=${workspaceFolder}/.golangci.yml",
+    "--fast"
+  ],
+  "go.lintOnSave": "package",
+}

@@ -1,0 +1,29 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.122.1/containers/docker-existing-docker-compose
+// If you want to run as a non-root user in the container, see .devcontainer/docker-compose.yml.
+{
+  "name": "submit-sitemap",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode" : {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/sh"
+      },
+      "extensions": [
+        "editorconfig.editorconfig",
+        "alefragnani.bookmarks",
+        "wmaurer.change-case",
+        "golang.go"
+      ]
+    }
+  },
+  "forwardPorts": [],
+  // "runServices": [],
+  "shutdownAction": "none"
+  // "postCreateCommand": "",
+  // "remoteUser": "vscode"
+}

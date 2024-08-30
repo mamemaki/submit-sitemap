@@ -1,0 +1,10 @@
+run:
+  timeout: 1m
+linters:
+  enable:
+    - revive
+linters-settings:
+  revive:
+    rules:
+      - name: var-declaration
+        disabled: true
