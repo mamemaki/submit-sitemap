@@ -7,7 +7,7 @@ submit-sitemap is a command line tool to submit a sitemap to search engines (Goo
 
 Download the executable from Github [releases](https://github.com/mamemaki/submit-sitemap/releases) according to your platform.
 
-Ubuntu(PowerShell):
+Windows(PowerShell):
 ```
 wget https://github.com/mamemaki/submit-sitemap/releases/download/v1.0.0/submit-sitemap_Windows_x86_64.zip -outfile $pwd\submit-sitemap.zip
 Expand-Archive submit-sitemap.zip
