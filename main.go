@@ -25,14 +25,6 @@ func getVersion() string {
 		// for `go install` or `go run`
 		if buildInfo, ok := debug.ReadBuildInfo(); ok {
 			version = buildInfo.Main.Version
-			for _, v := range buildInfo.Settings {
-				switch v.Key {
-				case "vcs.revision":
-					commit = v.Value
-				case "vcs.time":
-					date = v.Value
-				}
-			}
 		}
 	}
 
