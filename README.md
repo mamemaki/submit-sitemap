@@ -1,6 +1,38 @@
 # submit-sitemap
 submit-sitemap is a command line tool to submit a sitemap to search engines (Google/Bing).
 
+## Install
+
+### Download the executable from Github releases
+
+Download the executable from Github [releases](https://github.com/mamemaki/submit-sitemap/releases) according to your platform.
+
+Ubuntu(PowerShell):
+```
+wget https://github.com/mamemaki/submit-sitemap/releases/download/v1.0.0/submit-sitemap_Windows_x86_64.zip -outfile $pwd\submit-sitemap.zip
+Expand-Archive submit-sitemap.zip
+.\submit-sitemap\submit-sitemap.exe -v
+```
+
+Ubuntu:
+```
+wget https://github.com/mamemaki/submit-sitemap/releases/download/v1.0.0/submit-sitemap_Linux_arm64.tar.gz
+tar -xvzf submit-sitemap_Linux_arm64.tar.gz
+./submit-sitemap -v
+```
+
+### From source with Go environment
+
+```
+go install github.com/mamemaki/submit-sitemap@v1
+```
+
+or 
+
+```
+go run github.com/mamemaki/submit-sitemap@v1 -f=https://example.com/sitemap.xml -t=google
+```
+
 ## Usage
 To submit a sitemap to Google:
 ```
