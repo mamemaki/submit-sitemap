@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log/slog"
 	"os"
+	"runtime/debug"
 
 	"github.com/mamemaki/submit-sitemap/internal/bing"
 	"github.com/mamemaki/submit-sitemap/internal/flagutil"
@@ -20,6 +21,21 @@ var (
 )
 
 func getVersion() string {
+	if version == "(devel)" {
+		// for `go install` or `go run`
+		if buildInfo, ok := debug.ReadBuildInfo(); ok {
+			version = buildInfo.Main.Version
+			for _, v := range buildInfo.Settings {
+				switch v.Key {
+				case "vcs.revision":
+					commit = v.Value
+				case "vcs.time":
+					date = v.Value
+				}
+			}
+		}
+	}
+
 	ver := version
 	ver += fmt.Sprintf("\nRevision: %s", commit)
 	ver += fmt.Sprintf("\nBuilt at %s", date)
