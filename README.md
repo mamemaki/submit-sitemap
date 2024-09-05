@@ -45,9 +45,9 @@ To submit a sitemap to Google and Bing:
 submit-sitemap -f=https://example.com/sitemap.xml -t=google,bing
 ```
 
-## Command Line Options
+## Command Line Options and Environment variables
 
-The following are submit-sitemap's command-line options:
+The following are submit-sitemap's command-line options and Environment variables:
 
 ```
 Usage:
@@ -64,6 +64,10 @@ Flags:
       --bing-feedpath string     FeedUrl for Bing. If omitted, we will guess it from feedurl. e.g. https://example.com/sitemap.xml
   -h, --help                     help for submit-sitemap
   -v, --version                  version for submit-sitemap
+
+Environment variables:
+  GOOGLE_APPLICATION_CREDENTIALS_JSON   The content of Service Account credential JSON for Google Console API
+  BING_APIKEY                           The API Key for Bing Webmaster API
 ```
 
 ## Google
