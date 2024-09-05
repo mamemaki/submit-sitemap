@@ -25,6 +25,7 @@ tar -xvzf submit-sitemap_Linux_arm64.tar.gz
 
 ```
 go install github.com/mamemaki/submit-sitemap@v1
+~/go/bin/submit-sitemap -v
 ```
 
 or 
